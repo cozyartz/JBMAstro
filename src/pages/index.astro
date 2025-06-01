@@ -1,16 +1,75 @@
 ---
-
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>J&B McKinney Rentals | Tuscaloosa Property Transformations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Affordable rental homes, quality renovations, and property care from J&B McKinney Rentals in Tuscaloosa, AL." />
+  </head>
+  <body class="bg-gray-50 text-gray-800 leading-relaxed font-sans">
+
+    <Header />
+
+    <!-- Hero Section -->
+    <section class="relative bg-white py-20 px-6 text-center animate-fade-in">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Affordable Rentals. Beautiful Renovations.</h1>
+        <p class="text-lg text-gray-600 mb-6">Serving Tuscaloosa with care, craftsmanship, and pride in every home we touch.</p>
+        <a href="/gallery-masonry" class="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">View Transformations</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-6 bg-gray-100 animate-fade-in">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Built by Family, for Families</h2>
+          <p class="text-gray-700 text-lg">
+            J&B McKinney Rentals is a family-run company rooted in Tuscaloosa, Alabama. Our mission is to provide quality, comfortable homes to tenants while revitalizing the neighborhoods we love. From full renovations to careful property management, we treat every project like it's our own.
+          </p>
+        </div>
+        <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_WebBanner/public" alt="J&B McKinney Banner" class="rounded shadow-lg" />
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 px-6 text-center animate-fade-in">
+      <h2 class="text-3xl font-bold mb-8">What We Do</h2>
+      <div class="max-w-4xl mx-auto grid gap-10 md:grid-cols-3 text-left">
+        <div>
+          <h3 class="font-semibold text-lg mb-2">Full Home Renovations</h3>
+          <p class="text-gray-600">We transform neglected houses into safe, stylish homes — top to bottom.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">Rental Property Management</h3>
+          <p class="text-gray-600">We care for every home as if we live there ourselves — responsive, reliable, and fair.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">Community Investment</h3>
+          <p class="text-gray-600">We're building more than homes. We're helping shape a better Tuscaloosa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section class="bg-white py-16 px-6 animate-fade-in">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">See the Results</h2>
+        <p class="text-gray-600 mb-8">We let the transformations speak for themselves.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_I_0031/jpeg/public" class="rounded shadow-sm hover:scale-105 transition" alt="Preview 1" />
+          <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_I_0026/jpeg/public" class="rounded shadow-sm hover:scale-105 transition" alt="Preview 2" />
+          <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_I_0029/jpeg/public" class="rounded shadow-sm hover:scale-105 transition" alt="Preview 3" />
+          <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_I_0024/jpeg/public" class="rounded shadow-sm hover:scale-105 transition" alt="Preview 4" />
+        </div>
+        <a href="/gallery-masonry" class="inline-block text-sm text-black font-semibold hover:underline">Browse the full gallery →</a>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
 </html>

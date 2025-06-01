@@ -1,47 +1,96 @@
-# Astro Starter Kit: Minimal
+# J&B McKinney Rentals
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Welcome to the official web presence of **J&B McKinney Rental Properties**, an affordable housing initiative based in Tuscaloosa, Alabama. This Astro-powered site showcases property transformations, the mission of the founder, and investment opportunities that uplift underserved communities.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+![Preview](https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/2af8a878-e51d-4c8d-17da-7a434e188500/public)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🚀 Project Overview
 
-Inside of your Astro project, you'll see the following folders and files:
+This project is built with [Astro](https://astro.build/), a fast static site generator, and styled with [Tailwind CSS](https://tailwindcss.com/). It includes:
 
-```text
+- Reusable layout components (`Header`, `Footer`)
+- A responsive Pinterest-style gallery powered by [Cloudflare Images](https://developers.cloudflare.com/images/)
+- Mission-driven messaging and founder story
+- Mobile-friendly design
+
+---
+
+## 🏗 Folder Structure
+
 /
-├── public/
+├── public/               # Static assets
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/       # Reusable Astro components
+│   │   ├── Header.astro
+│   │   └── Footer.astro
+│   ├── pages/            # Routes (.astro files)
+│   │   ├── index.astro   # Home page
+│   │   └── gallery.astro # Project gallery
+│   └── styles.css        # Tailwind CSS file
+├── astro.config.mjs
+├── tailwind.config.js
+├── package.json
+└── README.md
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🧑‍💻 Local Development
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Prerequisites
+- Node.js `18+`
+- npm
 
-## 🧞 Commands
+### Install Dependencies
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm install
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Run the Dev Server
 
-## 👀 Want to learn more?
+```bash
+npm run dev
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+> Visit `http://localhost:4321` to view the site locally.
+
+---
+
+## 🖼 Image Hosting (Cloudflare)
+
+Images are delivered using [Cloudflare Image Delivery](https://developers.cloudflare.com/images/image-delivery/urls/):
+
+
+https://imagedelivery.net/<account_hash>/<image_id>/<variant>
+
+---
+
+## 🧱 Tech Stack
+
+- **Astro**: static-first site generator
+- **Tailwind CSS**: utility-first styling
+- **Cloudflare Images**: global CDN image hosting
+- **Cloudflare Pages**: for deployment
+
+---
+
+## 📞 Contact
+
+J&B McKinney Rentals  
+📍 Tuscaloosa, AL  
+- **Deirdre Stokes, CEO**: (269) 317-5272  
+- **Jonathan Stokes, COO**: (256) 651-7512
+
+---
+
+## 📝 License
+
+© 2025 J&B McKinney Rentals. All rights reserved.  
+Site design by [Cozyartz Media Group](https://cozyartz.com)
+
+---
+
+> Made with ❤️ for purpose-driven real estate.

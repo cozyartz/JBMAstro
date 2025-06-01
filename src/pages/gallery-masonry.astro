@@ -1,0 +1,67 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const cloudflareBase = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw";
+
+const images = [
+  { id: "2926647b-4a25-4d03-6202-0f8a10ae8100", caption: "Reinforced framing in progress." },
+  { id: "1d47e4a6-e0d4-4e8c-8092-9cc90c396200", caption: "Kitchen wall stripped for rewiring." },
+  { id: "15241d0e-3bdb-49fb-3d7c-11f351ef4900", caption: "Exterior paint refresh complete." },
+  { id: "1af20211-4195-4d58-98c5-df069823ce00", caption: "Window trim restored to original character." },
+  { id: "6ad0c6fc-cebb-4130-4bbc-8bde4ae8ab00", caption: "Back porch roof removed and reframed." },
+  { id: "c6198e05-8520-4498-768d-61c3c9babb00", caption: "New hardwood flooring installation." },
+  { id: "3e53b3be-1bf7-4ed5-cf8a-752118e57b00", caption: "Dining room post-renovation." },
+  { id: "a4f00a1f-f6b4-4e3d-561e-cbb173815c00", caption: "Final walkthrough with finishing touches." },
+  { id: "c4bdeaf9-5e8c-4f26-892e-f54468025f00", caption: "Landscape installation and exterior signage." },
+
+  { id: "2af8a878-e51d-4c8d-17da-7a434e188500", caption: "Exterior before demo — original siding and porch structure." },
+  { id: "ac88a6f4-5ce3-466a-c69e-588527ae8c00", caption: "Foundation stabilization under way in rear wing." },
+  { id: "800df87a-70d9-4468-e8e9-aa252c18c500", caption: "Interior gut — removing old drywall and flooring." },
+  { id: "7e11c5cb-edbc-49b8-9a5e-b758fddf5e00", caption: "Framing updates to support new floorplan." },
+  { id: "780829a3-167c-487d-c1d5-2de492f53c00", caption: "Kitchen electrical rough-in inspection complete." },
+  { id: "e81bb8b7-c948-4689-2762-b97b95ff1900", caption: "New HVAC system installed on upper floor." },
+  { id: "5a064719-d34f-47c5-8d4d-4c9389f6e000", caption: "Drywall up and first coat of paint." },
+  { id: "16d7d0d2-c360-4c34-20e2-ffe202c5cf00", caption: "New cabinets and window trim installed." },
+  { id: "f303bfcb-d02c-4b21-3288-3933b041f000", caption: "Light fixtures staged for install day." },
+  { id: "33c65c50-739c-4c61-ddda-1d8715995300", caption: "Hardwood floors refinished and sealed." },
+  { id: "d6cb8764-e284-4fef-c2d7-00ea82822000", caption: "Bathroom tile work complete — clean and modern." },
+  { id: "91d5df9c-f3c3-4e8e-740c-1e20ad195100", caption: "Front porch rebuild in progress." },
+  { id: "caec1184-4a83-453b-0575-ebf5d56db300", caption: "New roof and exterior paint make a huge impact." },
+  { id: "ea3273a9-01b0-4356-0ef2-8f3f91cf5b00", caption: "Landscaping day! Mulch, shrubs, and flowers added." },
+  { id: "785a1351-0c20-4dd7-53fa-80da4184ec00", caption: "Final inspection passed — ready for tenants." },
+  { id: "ddad635e-f998-437c-8154-9738a7774d00", caption: "Tenant-ready kitchen with all appliances installed." },
+  { id: "a2a8dd55-140c-41d8-1dfb-441c1289bf00", caption: "Living room staging for listing photography." },
+  { id: "e6dabd50-ce55-4dfb-255c-8ce7c8c63700", caption: "Curb appeal showing off fresh paint and signage." },
+  { id: "ff09da5d-fe6d-4c40-06e0-189d406ecd00", caption: "Backyard cleared for play and pets." },
+  { id: "fc836147-4039-4ff8-9438-2d95c5d11900", caption: "Welcome mat out — project complete!" }
+];
+---
+
+<html lang="en">
+  <head>
+    <title>Gallery | J&B McKinney Rentals</title>
+  </head>
+  <body class="bg-white text-gray-900">
+    <Header />
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+      <h1 class="text-4xl font-bold text-center mb-12 animate-fade-in">Transformation Gallery</h1>
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 animate-fade-in delay-200">
+        {images.map((img) => (
+          <div class="break-inside-avoid overflow-hidden rounded-lg shadow hover:shadow-lg transition-shadow duration-300 bg-white">
+            <img
+              src={`${cloudflareBase}/${img.id}/public`}
+              alt={img.caption}
+              class="w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+            <p class="p-3 text-sm text-gray-700">{img.caption}</p>
+          </div>
+        ))}
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>

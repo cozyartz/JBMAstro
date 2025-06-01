@@ -1,0 +1,38 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+  <head>
+    <title>Our Mission | J&B McKinney Rentals</title>
+  </head>
+  <body class="bg-white text-gray-900">
+    <Header />
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
+      <section class="text-center mb-12 animate-fade-in">
+        <h1 class="text-4xl font-bold mb-4">Our Mission</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Creating safe, community-driven housing in underserved neighborhoods. By revitalizing streets, we help families build generational wealth and offer measurable returns for investors.
+        </p>
+      </section>
+
+      <section class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="animate-fade-in delay-200">
+          <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/aafa0fae-55df-4761-a51a-48f19c3c9e00/public"
+               alt="Deirdre Stokes, Founder"
+               class="rounded-xl shadow-md w-full object-cover" />
+        </div>
+        <div class="space-y-6 animate-fade-in delay-300">
+          <h2 class="text-2xl font-semibold">Deirdre M. Stokes, Founder & CEO</h2>
+          <p>Raised on the very block she now restores, Deirdre was among the first Black students to integrate Verner Elementary in 1965. With degrees from Michigan and Purdue, she built a corporate career before returning home to invest in community uplift through real estate.</p>
+          <h2 class="text-2xl font-semibold">Jonathan Stokes, VP & COO</h2>
+          <p>Jonathan leads operations and resident engagement, bringing local insight and scalable solutions to every project.</p>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
