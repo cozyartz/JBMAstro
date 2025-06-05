@@ -1,8 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-const cloudflareBase = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw";
+import { cfImage } from '../lib/images';
 
 const images = [
   { id: "2926647b-4a25-4d03-6202-0f8a10ae8100", caption: "Our amazing and dedicated crew." },
@@ -51,7 +50,7 @@ const images = [
         {images.map((img) => (
           <div class="break-inside-avoid overflow-hidden rounded-lg shadow hover:shadow-lg transition-shadow duration-300 bg-white">
             <img
-              src={`${cloudflareBase}/${img.id}/public`}
+              src={cfImage(img.id, 'public', '/placeholder.svg')}
               alt={img.caption}
               class="w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-300"
               loading="lazy"

@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { cfImage } from '../lib/images';
 ---
 
 <html lang="en">
@@ -32,7 +33,7 @@ import Footer from '../components/Footer.astro';
             J&B McKinney Rentals is a family-run company rooted in Tuscaloosa, Alabama. Our mission is to provide quality, comfortable homes to tenants while revitalizing the neighborhoods we love. From full renovations to careful property management, we treat every project like it's our own.
           </p>
         </div>
-        <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_WebBanner/public" alt="J&B McKinney Banner" class="rounded shadow-lg" />
+        <img src={cfImage('JBM_WebBanner', 'public', '/banner.svg')} alt="J&B McKinney Banner" class="rounded shadow-lg" />
       </div>
     </section>
 
@@ -61,10 +62,10 @@ import Footer from '../components/Footer.astro';
         <h2 class="text-3xl font-bold mb-6">See the Results</h2>
         <p class="text-gray-600 mb-8">We let the transformations speak for themselves.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-          <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_I_0031/jpeg/public" class="rounded shadow-sm hover:scale-105 transition" alt="Preview 1" />
-          <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_I_0026/jpeg/public" class="rounded shadow-sm hover:scale-105 transition" alt="Preview 2" />
-          <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_I_0029/jpeg/public" class="rounded shadow-sm hover:scale-105 transition" alt="Preview 3" />
-          <img src="https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/JBM_I_0024/jpeg/public" class="rounded shadow-sm hover:scale-105 transition" alt="Preview 4" />
+          <img src={cfImage('JBM_I_0031', 'jpeg/public')} class="rounded shadow-sm hover:scale-105 transition" alt="Preview 1" />
+          <img src={cfImage('JBM_I_0026', 'jpeg/public')} class="rounded shadow-sm hover:scale-105 transition" alt="Preview 2" />
+          <img src={cfImage('JBM_I_0029', 'jpeg/public')} class="rounded shadow-sm hover:scale-105 transition" alt="Preview 3" />
+          <img src={cfImage('JBM_I_0024', 'jpeg/public')} class="rounded shadow-sm hover:scale-105 transition" alt="Preview 4" />
         </div>
         <a href="/gallery-masonry" class="inline-block text-sm text-black font-semibold hover:underline">Browse the full gallery →</a>
       </div>

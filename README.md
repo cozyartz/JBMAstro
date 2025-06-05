@@ -61,10 +61,14 @@ npm run dev
 
 ## 🖼 Image Hosting (Cloudflare)
 
-Images are delivered using [Cloudflare Image Delivery](https://developers.cloudflare.com/images/image-delivery/urls/):
+Images are delivered using [Cloudflare Image Delivery](https://developers.cloudflare.com/images/image-delivery/urls/).
+Set `CLOUDFLARE_BASE` in an `.env` file to your account's delivery URL, e.g.:
 
+```
+CLOUDFLARE_BASE=https://imagedelivery.net/<account_hash>
+```
 
-https://imagedelivery.net/<account_hash>/<image_id>/<variant>
+Then image paths are generated with `<image_id>/<variant>`. If `CLOUDFLARE_BASE` is not set, local placeholder images are used instead.
 
 ---
 
