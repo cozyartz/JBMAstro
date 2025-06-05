@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const favicon = "/favicon.svg";
+const ogImage = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw/2f5d0955-89ba-416d-44de-d3f741e14900/public";
+---
+
+<title>{title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content={description} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<link rel="icon" href={favicon} type="image/svg+xml" />
+<meta charset="UTF-8" />
