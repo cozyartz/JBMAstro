@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: custom site-wide styles */
+/* Font Awesome */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/* Typography & Base Styling */
 body {
   @apply font-sans bg-white text-gray-900 leading-relaxed;
 }
@@ -12,9 +15,31 @@ h1, h2, h3 {
 }
 
 a {
-  @apply text-blue-600 hover:text-blue-800 underline;
+  @apply text-blue-600 hover:text-blue-800 transition-colors duration-200;
 }
 
 img {
   @apply rounded-lg shadow-md;
+}
+
+/* Icon Animation */
+i.fas, i.far, i.fab {
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+i.fas:hover, i.far:hover, i.fab:hover {
+  @apply scale-110 text-opacity-90;
+}
+
+/* Utility Enhancements */
+.btn {
+  @apply inline-block px-5 py-3 bg-blue-600 text-white rounded-md font-semibold shadow hover:bg-blue-700 transition duration-200;
+}
+
+.section {
+  @apply py-12 px-6 max-w-6xl mx-auto;
+}
+
+.card {
+  @apply p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300;
 }

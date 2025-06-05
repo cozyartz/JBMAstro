@@ -1,75 +1,76 @@
 ---
+import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { cfImage } from '../lib/images';
+
+const cloudflareBase = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw";
+const bannerId = "71585fe1-6916-4e09-a0cb-adff0886c300";
 ---
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>J&B McKinney Rentals | Tuscaloosa Property Transformations</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Affordable rental homes, quality renovations, and property care from J&B McKinney Rentals in Tuscaloosa, AL." />
+    <Seo 
+      title="J&B McKinney Rentals | Affordable Rentals & Renovations"
+      description="Discover beautiful, affordable home rentals by J&B McKinney. Family-owned. Community-focused. See our mission and transformations."
+    />
   </head>
-  <body class="bg-gray-50 text-gray-800 leading-relaxed font-sans">
-
+  <body class="bg-white text-gray-900 leading-relaxed antialiased">
     <Header />
 
-    <!-- Hero Section -->
-    <section class="relative bg-white py-20 px-6 text-center animate-fade-in">
-      <div class="max-w-3xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Affordable Rentals. Beautiful Renovations.</h1>
-        <p class="text-lg text-gray-600 mb-6">Serving Tuscaloosa with care, craftsmanship, and pride in every home we touch.</p>
-        <a href="/gallery-masonry" class="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">View Transformations</a>
-      </div>
-    </section>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-24">
+      <!-- Hero -->
+      <section class="text-center space-y-6 animate-fade-in">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          Affordable Rentals. Beautiful Renovations.
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Serving Tuscaloosa with care, craftsmanship, and pride in every home we touch.
+        </p>
+        <a href="/gallery-masonry" class="inline-block bg-black text-white font-medium px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-200 shadow-lg">
+          View Transformations
+        </a>
+      </section>
 
-    <!-- About Section -->
-    <section class="py-16 px-6 bg-gray-100 animate-fade-in">
-      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <!-- About -->
+      <section class="grid md:grid-cols-2 gap-10 items-center bg-gray-50 p-6 md:p-10 rounded-xl shadow-md animate-fade-in delay-100">
         <div>
-          <h2 class="text-3xl font-bold mb-4">Built by Family, for Families</h2>
-          <p class="text-gray-700 text-lg">
-            J&B McKinney Rentals is a family-run company rooted in Tuscaloosa, Alabama. Our mission is to provide quality, comfortable homes to tenants while revitalizing the neighborhoods we love. From full renovations to careful property management, we treat every project like it's our own.
+          <h2 class="text-2xl font-semibold mb-4">Built by Family, for Families</h2>
+          <p class="text-gray-700 text-base leading-relaxed">
+            J&B McKinney Rentals is a family-run company rooted in Tuscaloosa, Alabama. Our mission is to provide quality, comfortable homes to tenants while revitalizing the neighborhoods we love.
+          </p>
+          <p class="text-gray-700 mt-4 text-base leading-relaxed">
+            From full renovations to careful property management, we treat every project like it’s our own — with care, honesty, and long-term pride.
           </p>
         </div>
-        <img src={cfImage('JBM_WebBanner', 'public', '/banner.svg')} alt="J&B McKinney Banner" class="rounded shadow-lg" />
-      </div>
-    </section>
+        <div>
+          <img 
+            src={`${cloudflareBase}/${bannerId}/public`} 
+            alt="J&B McKinney Rentals banner"
+            class="rounded-lg shadow-lg w-full h-auto object-cover animate-zoom-in"
+            loading="lazy"
+          />
+        </div>
+      </section>
 
-    <!-- Services Section -->
-    <section class="py-20 px-6 text-center animate-fade-in">
-      <h2 class="text-3xl font-bold mb-8">What We Do</h2>
-      <div class="max-w-4xl mx-auto grid gap-10 md:grid-cols-3 text-left">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Full Home Renovations</h3>
-          <p class="text-gray-600">We transform neglected houses into safe, stylish homes — top to bottom.</p>
+      <!-- Services -->
+      <section class="text-center animate-fade-in delay-200">
+        <h3 class="text-2xl font-bold mb-6">What We Do</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 text-left">
+          <div>
+            <h4 class="font-semibold text-lg mb-2"><i class="fas fa-tools mr-2 text-gray-500"></i>Full Home Renovations</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">We transform neglected houses into safe, stylish homes — top to bottom.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg mb-2"><i class="fas fa-home mr-2 text-gray-500"></i>Rental Property Management</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">We care for every home as if we live there ourselves — responsive, reliable, and fair.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg mb-2"><i class="fas fa-seedling mr-2 text-gray-500"></i>Community Investment</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">We’re building more than homes. We’re helping shape a better Tuscaloosa.</p>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Rental Property Management</h3>
-          <p class="text-gray-600">We care for every home as if we live there ourselves — responsive, reliable, and fair.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Community Investment</h3>
-          <p class="text-gray-600">We're building more than homes. We're helping shape a better Tuscaloosa.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Preview Section -->
-    <section class="bg-white py-16 px-6 animate-fade-in">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6">See the Results</h2>
-        <p class="text-gray-600 mb-8">We let the transformations speak for themselves.</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-          <img src={cfImage('JBM_I_0031', 'jpeg/public')} class="rounded shadow-sm hover:scale-105 transition" alt="Preview 1" />
-          <img src={cfImage('JBM_I_0026', 'jpeg/public')} class="rounded shadow-sm hover:scale-105 transition" alt="Preview 2" />
-          <img src={cfImage('JBM_I_0029', 'jpeg/public')} class="rounded shadow-sm hover:scale-105 transition" alt="Preview 3" />
-          <img src={cfImage('JBM_I_0024', 'jpeg/public')} class="rounded shadow-sm hover:scale-105 transition" alt="Preview 4" />
-        </div>
-        <a href="/gallery-masonry" class="inline-block text-sm text-black font-semibold hover:underline">Browse the full gallery →</a>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <Footer />
   </body>

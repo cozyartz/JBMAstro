@@ -1,0 +1,23 @@
+export const images = [
+  { id: "2926647b-4a25-4d03-6202-0f8a10ae8100", caption: "Our amazing and dedicated crew." },
+  { id: "1d47e4a6-e0d4-4e8c-8092-9cc90c396200", caption: "Reinforced framing in progress." },
+  { id: "15241d0e-3bdb-49fb-3d7c-11f351ef4900", caption: "New roof and exterior paint make a huge impact." },
+  { id: "1af20211-4195-4d58-98c5-df069823ce00", caption: "Welcome mat out — project complete!" },
+  { id: "6ad0c6fc-cebb-4130-4bbc-8bde4ae8ab00", caption: "Back porch roof removed and reframed." },
+  { id: "c6198e05-8520-4498-768d-61c3c9babb00", caption: "Tenant-ready kitchen with all appliances installed." },
+  { id: "3e53b3be-1bf7-4ed5-cf8a-752118e57b00", caption: "Dining room post-renovation." },
+  { id: "a4f00a1f-f6b4-4e3d-561e-cbb173815c00", caption: "Exterior before demo — original siding and porch structure." },
+  { id: "c4bdeaf9-5e8c-4f26-892e-f54468025f00", caption: "Cabinet installation in progress." },
+  { id: "2af8a878-e51d-4c8d-17da-7a434e188500", caption: "New roof and exterior paint make a huge impact." },
+  { id: "ac88a6f4-5ce3-466a-c69e-588527ae8c00", caption: "Foundation stabilization under way in rear wing." },
+  { id: "800df87a-70d9-4468-e8e9-aa252c18c500", caption: "Interior gut — removing old drywall and flooring." },
+  { id: "7e11c5cb-edbc-49b8-9a5e-b758fddf5e00", caption: "Framing updates to support new floorplan." },
+  { id: "780829a3-167c-487d-c1d5-2de492f53c00", caption: "Kitchen electrical rough-in inspection complete." },
+  { id: "e81bb8b7-c948-4689-2762-b97b95ff1900", caption: "New HVAC system installed on upper floor." },
+  { id: "5a064719-d34f-47c5-8d4d-4c9389f6e000", caption: "Drywall up and first coat of paint." },
+  { id: "f303bfcb-d02c-4b21-3288-3933b041f000", caption: "Foundation stabilization under way in rear wing." },
+  { id: "ddad635e-f998-437c-8154-9738a7774d00", caption: "Backyard cleared for play and pets." },
+  { id: "a2a8dd55-140c-41d8-1dfb-441c1289bf00", caption: "Landscaping day! Mulch, shrubs, and flowers added." },
+  { id: "ff09da5d-fe6d-4c40-06e0-189d406ecd00", caption: "Duplex foundation building." },
+  { id: "fc836147-4039-4ff8-9438-2d95c5d11900", caption: "Duplex foundation reinforcement." }
+];

@@ -1,39 +1,51 @@
 ---
+import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { cfImage } from '../lib/images';
+
+const cloudflareBase = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw";
+const founderImgId = "aaf0afae-55df-4761-a51a-48f19c3c9e00"; // Confirmed image
 ---
 
 <html lang="en">
   <head>
-    <title>Our Mission | J&B McKinney Rentals</title>
+    <Seo 
+      title="Our Mission | J&B McKinney Rentals"
+      description="J&B McKinney Rentals is built on the belief that everyone deserves access to comfortable, dignified housing. Learn about our commitment to revitalizing Tuscaloosa communities."
+    />
   </head>
-  <body class="bg-white text-gray-900">
+
+  <body class="bg-white text-gray-900 leading-relaxed">
     <Header />
 
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-      <section class="text-center mb-12 animate-fade-in">
-        <h1 class="text-4xl font-bold mb-4">Our Mission</h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Creating safe, community-driven housing in underserved neighborhoods. By revitalizing streets, we help families build generational wealth and offer measurable returns for investors.
-        </p>
-      </section>
+    <main class="max-w-6xl mx-auto px-4 py-16">
+      <h1 class="text-4xl font-bold text-center mb-8 animate-fade-in">Our Mission</h1>
 
-      <section class="grid md:grid-cols-2 gap-10 items-start">
-        <div class="animate-fade-in delay-200">
-          <img
-            src={cfImage('aafa0fae-55df-4761-a51a-48f19c3c9e00', 'public', '/mission.svg')}
-            alt="Deirdre Stokes, Founder"
-            class="rounded-xl shadow-md w-full object-cover"
+      <div class="grid md:grid-cols-2 gap-10 items-center animate-fade-in delay-100">
+        <div>
+          <p class="mb-4">
+            J&B McKinney Rentals is built on the belief that everyone deserves access to comfortable, dignified housing. 
+            As a family-owned business rooted in Tuscaloosa, Alabama, our mission is to breathe new life into aging properties 
+            and neighborhoods while putting people first.
+          </p>
+          <p>
+            From property management to full-scale renovations, we’re deeply invested in our community — and we treat every 
+            home like it’s our own. We’re not just providing rentals, we’re creating homes that are safe, welcoming, and built to last.
+          </p>
+        </div>
+
+        <div class="flex justify-center">
+          <img 
+            src={`${cloudflareBase}/${founderImgId}/public`}
+            alt="Founders of J&B McKinney"
+            width="600"
+            height="400"
+            loading="lazy"
+            decoding="async"
+            class="w-full max-w-[400px] object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
           />
         </div>
-        <div class="space-y-6 animate-fade-in delay-300">
-          <h2 class="text-2xl font-semibold">Deirdre M. Stokes, Founder & CEO</h2>
-          <p>Raised on the very block she now restores, Deirdre was among the first Black students to integrate Verner Elementary in 1965. With degrees from Michigan and Purdue, she built a corporate career before returning home to invest in community uplift through real estate.</p>
-          <h2 class="text-2xl font-semibold">Jonathan Stokes, VP & COO</h2>
-          <p>Jonathan leads operations and resident engagement, bringing local insight and scalable solutions to every project.</p>
-        </div>
-      </section>
+      </div>
     </main>
 
     <Footer />

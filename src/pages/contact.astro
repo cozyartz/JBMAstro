@@ -1,0 +1,55 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Seo from '../components/Seo.astro';
+---
+
+<html lang="en">
+  <head>
+    <Seo title="Contact Us | J&B McKinney Rentals" description="Reach out to J&B McKinney Rentals to inquire about properties, availability, or partnership opportunities in Tuscaloosa." />
+  </head>
+  <body class="bg-white text-gray-900 leading-relaxed">
+    <Header />
+
+    <main class="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
+      <h1 class="text-4xl font-bold text-center mb-10">Get in Touch</h1>
+
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <form class="space-y-6 bg-gray-50 p-6 rounded-lg shadow-md">
+          <div>
+            <label for="name" class="block font-medium">Name</label>
+            <input type="text" id="name" class="mt-1 w-full border rounded p-2" required />
+          </div>
+          <div>
+            <label for="email" class="block font-medium">Email</label>
+            <input type="email" id="email" class="mt-1 w-full border rounded p-2" required />
+          </div>
+          <div>
+            <label for="message" class="block font-medium">Message</label>
+            <textarea id="message" rows="5" class="mt-1 w-full border rounded p-2" required></textarea>
+          </div>
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+            Send Message
+          </button>
+        </form>
+
+        <div class="space-y-6 text-lg">
+          <p>
+            Whether you're looking to rent, invest, or collaborate, we're here to help.
+            Drop us a line and we'll get back to you soon.
+          </p>
+          <div>
+            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+            <a href="mailto:rentals@rentwithjbm.com" class="hover:underline">rentals@rentwithjbm.com</a>
+          </div>
+          <div>
+            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+            Tuscaloosa, Alabama
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>

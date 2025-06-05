@@ -3,46 +3,63 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "Mission", href: "/mission" },
   { name: "Gallery", href: "/gallery-masonry" },
-  { name: "Contact", href: "/#contact" },
+  { name: "Contact", href: "/contact" }
 ];
+
+const cloudflareBase = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw";
+const logoId = "a39cf772-3c39-4a1a-ba3b-199acfade900"; // SVG logo that works
 ---
 
-<header class="bg-white shadow-md sticky top-0 z-50 animate-fade-in">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <a href="/" class="text-2xl font-bold text-gray-900">J&B McKinney Rentals</a>
+<header class="bg-white shadow-md sticky top-0 z-50 w-full">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center space-x-3 animate-fade-in">
+      <img
+        src={`${cloudflareBase}/${logoId}/public`}
+        alt="J&B McKinney Rentals Logo"
+        width="150"
+        height="40"
+        class="h-10 w-auto object-contain"
+        loading="eager"
+        decoding="async"
+      />
+      <span class="text-lg sm:text-xl font-semibold text-gray-900 hidden sm:inline">
+        J&B McKinney Rentals
+      </span>
+    </a>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden md:flex space-x-6">
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
       {navLinks.map(link => (
-        <a href={link.href} class="text-gray-700 hover:text-black font-medium transition-all">{link.name}</a>
+        <a href={link.href} class="hover:text-blue-600 transition-colors duration-200">{link.name}</a>
       ))}
+      <a href="mailto:rentals@rentwithjbm.com" title="Email us" class="hover:text-blue-500">
+        <i class="fas fa-envelope text-base hover:scale-110 transition-transform duration-300"></i>
+      </a>
     </nav>
 
-    <!-- Mobile Toggle Button -->
-    <button id="menu-toggle" class="md:hidden text-gray-700 hover:text-black focus:outline-none" aria-label="Toggle Menu">
-      ☰
-      <!-- Alternatively use Heroicon: 
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      -->
+    <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+      <i id="menu-icon" class="fas fa-bars text-xl transition-all duration-200"></i>
     </button>
   </div>
 
-  <!-- Mobile Menu -->
-  <nav id="mobile-menu" class="hidden md:hidden px-4 pb-4 animate-fade-in">
+  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-4 animate-fade-in">
     {navLinks.map(link => (
-      <a href={link.href} class="block py-2 text-gray-700 hover:text-black font-medium transition-all">{link.name}</a>
+      <a href={link.href} class="block py-2 text-gray-700 hover:text-blue-600">{link.name}</a>
     ))}
+    <a href="mailto:rentals@rentwithjbm.com" class="block py-2 text-gray-700 hover:text-blue-600">
+      <i class="fas fa-envelope mr-2"></i> Email Us
+    </a>
   </nav>
 
-  <script>
+  <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       const toggle = document.getElementById("menu-toggle");
       const menu = document.getElementById("mobile-menu");
+      const icon = document.getElementById("menu-icon");
 
       toggle.addEventListener("click", () => {
         menu.classList.toggle("hidden");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
       });
     });
   </script>
