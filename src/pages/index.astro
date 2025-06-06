@@ -3,8 +3,9 @@ import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const cloudflareBase = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw";
-const bannerId = "71585fe1-6916-4e09-a0cb-adff0886c300";
+import { bannerId } from '../gallery-data.js';
+
+const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
 ---
 
 <html lang="en">

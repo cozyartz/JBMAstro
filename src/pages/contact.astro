@@ -2,51 +2,59 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Seo from '../components/Seo.astro';
+import MotionFade from '../components/MotionFade.jsx';
 ---
 
 <html lang="en">
   <head>
     <Seo title="Contact Us | J&B McKinney Rentals" description="Reach out to J&B McKinney Rentals to inquire about properties, availability, or partnership opportunities in Tuscaloosa." />
   </head>
+
   <body class="bg-white text-gray-900 leading-relaxed">
     <Header />
 
-    <main class="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
-      <h1 class="text-4xl font-bold text-center mb-10">Get in Touch</h1>
+    <main class="max-w-4xl mx-auto px-6 py-16 space-y-12">
+      <MotionFade client:load>
+        <h1 class="text-4xl sm:text-5xl font-bold text-center mb-8">Get in Touch</h1>
+      </MotionFade>
 
       <div class="grid md:grid-cols-2 gap-10 items-start">
-        <form class="space-y-6 bg-gray-50 p-6 rounded-lg shadow-md">
-          <div>
-            <label for="name" class="block font-medium">Name</label>
-            <input type="text" id="name" class="mt-1 w-full border rounded p-2" required />
-          </div>
-          <div>
-            <label for="email" class="block font-medium">Email</label>
-            <input type="email" id="email" class="mt-1 w-full border rounded p-2" required />
-          </div>
-          <div>
-            <label for="message" class="block font-medium">Message</label>
-            <textarea id="message" rows="5" class="mt-1 w-full border rounded p-2" required></textarea>
-          </div>
-          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-            Send Message
-          </button>
-        </form>
+        <MotionFade client:load delay={0.1}>
+          <form class="space-y-6 bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-1">Name</label>
+              <input type="text" id="name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-1">Email</label>
+              <input type="email" id="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold mb-1">Message</label>
+              <textarea id="message" rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200">
+              Send Message
+            </button>
+          </form>
+        </MotionFade>
 
-        <div class="space-y-6 text-lg">
-          <p>
-            Whether you're looking to rent, invest, or collaborate, we're here to help.
-            Drop us a line and we'll get back to you soon.
-          </p>
-          <div>
-            <i class="fas fa-envelope text-blue-500 mr-2"></i>
-            <a href="mailto:rentals@rentwithjbm.com" class="hover:underline">rentals@rentwithjbm.com</a>
+        <MotionFade client:load delay={0.2}>
+          <div class="space-y-6 text-lg bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <p>
+              Whether you're looking to rent, invest, or collaborate, we're here to help.
+              Drop us a line and we'll get back to you soon.
+            </p>
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-blue-600 mr-3"></i>
+              <a href="mailto:rentals@rentwithjbm.com" class="hover:underline text-blue-700">rentals@rentwithjbm.com</a>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt text-blue-600 mr-3"></i>
+              <span>Tuscaloosa, Alabama</span>
+            </div>
           </div>
-          <div>
-            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
-            Tuscaloosa, Alabama
-          </div>
-        </div>
+        </MotionFade>
       </div>
     </main>
 

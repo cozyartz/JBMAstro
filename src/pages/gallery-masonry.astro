@@ -2,16 +2,17 @@
 import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import GalleryMasonry from '../components/GalleryMasonry.jsx';
 import { images } from '../gallery-data.js';
 
-const cloudflareBase = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw";
+const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
 ---
 
 <html lang="en">
   <head>
     <Seo 
       title="Home Transformation Gallery | J&B McKinney Rentals"
-      description="Explore renovations and revitalization projects by J&B McKinney Rentals, turning aging properties into beautiful homes."
+      description="Explore renovations and revitalization projects by J&B McKinney Rentals, turning neglected properties into beautiful, welcoming homes."
     />
   </head>
 
@@ -19,27 +20,12 @@ const cloudflareBase = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw";
     <Header />
 
     <main class="max-w-7xl mx-auto px-4 py-16">
-      <h1 class="text-4xl font-bold text-center mb-6 animate-fade-in">Home Transformation Gallery</h1>
-      <p class="text-center max-w-2xl mx-auto text-lg mb-10 animate-fade-in delay-100">
-        From foundation to finishing touches — explore how we turn neglected houses into warm, welcoming homes. Every project is a story of craftsmanship, care, and renewal.
+      <h1 class="text-4xl font-bold text-center mb-6">Home Transformation Gallery</h1>
+      <p class="text-center max-w-2xl mx-auto text-lg mb-10">
+        From foundation to finishing touches — explore how we turn neglected houses into warm, welcoming homes.
       </p>
 
-      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 animate-fade-in delay-200">
-        {images.map(({ id, caption }) => (
-          <div class="break-inside-avoid overflow-hidden rounded-lg shadow hover:shadow-lg transition duration-300 bg-white">
-            <img
-              src={`${cloudflareBase}/${id}/public`}
-              alt={caption}
-              width="600"
-              height="400"
-              class="w-full object-cover rounded-t-lg hover:scale-105 transition-transform duration-300 ease-in-out"
-              loading="lazy"
-              decoding="async"
-            />
-            <p class="p-3 text-sm text-gray-700">{caption}</p>
-          </div>
-        ))}
-      </div>
+      <GalleryMasonry client:load cloudflareBase={cloudflareBase} images={images} />
     </main>
 
     <Footer />

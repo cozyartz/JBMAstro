@@ -3,8 +3,9 @@ import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const cloudflareBase = "https://imagedelivery.net/PocH-U7ndwJHixntYqkoZw";
-const founderImgId = "aaf0afae-55df-4761-a51a-48f19c3c9e00"; // Confirmed image
+import { founders } from '../gallery-data.js';
+
+const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
 ---
 
 <html lang="en">
@@ -36,7 +37,7 @@ const founderImgId = "aaf0afae-55df-4761-a51a-48f19c3c9e00"; // Confirmed image
 
         <div class="flex justify-center">
           <img 
-            src={`${cloudflareBase}/${founderImgId}/public`}
+            src={`${cloudflareBase}/${founders}/public`}
             alt="Founders of J&B McKinney"
             width="600"
             height="400"
