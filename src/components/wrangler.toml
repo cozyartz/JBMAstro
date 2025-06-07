@@ -1,0 +1,6 @@
+name = "jbm-astro-site"
+compatibility_date = "2025-06-06"
+pages_build_output_dir = "./dist"
+
+[env.production]
+routes = ["rentwithjbm.com/*"]
