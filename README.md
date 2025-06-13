@@ -79,6 +79,8 @@ Then image paths are generated with `<image_id>/<variant>`. If `CLOUDFLARE_BASE`
 - **Cloudflare Images**: global CDN image hosting
 - **Cloudflare Pages**: for deployment
 
+wrangler pages deploy ./dist --project-name=jbm-astro-site --branch=main
+
 ---
 
 ## 📞 Contact
