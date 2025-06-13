@@ -19,8 +19,15 @@ module.exports = {
       },
       colors: {
         brand: {
-          DEFAULT: '#111827', // Dark slate (header/footer bg, if needed)
-          accent: '#1f2937'   // Optional contrast for CTA or banner overlays
+          teal: '#005B52',      // Primary teal
+          charcoal: '#333333',  // Dark charcoal
+          cream: '#F5F2E8',     // Warm cream
+          gold: '#E69F00',      // Golden yellow
+          blue: '#0072B2',      // Professional blue
+          'teal-light': '#007A6B',
+          'charcoal-light': '#4A4A4A',
+          'gold-light': '#F2B233',
+          'blue-light': '#1A8BC7'
         }
       },
       animation: {

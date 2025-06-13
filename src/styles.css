@@ -7,15 +7,15 @@
 
 /* Typography & Base Styling */
 body {
-  @apply font-sans bg-white text-gray-900 leading-relaxed;
+  @apply font-sans bg-brand-cream text-brand-charcoal leading-relaxed;
 }
 
 h1, h2, h3 {
-  @apply font-bold text-gray-900;
+  @apply font-bold text-brand-charcoal;
 }
 
 a {
-  @apply text-blue-600 hover:text-blue-800 transition-colors duration-200;
+  @apply text-brand-blue hover:text-brand-blue-light transition-colors duration-200;
 }
 
 img {
@@ -33,7 +33,11 @@ i.fas:hover, i.far:hover, i.fab:hover {
 
 /* Utility Enhancements */
 .btn {
-  @apply inline-block px-5 py-3 bg-blue-600 text-white rounded-md font-semibold shadow hover:bg-blue-700 transition duration-200;
+  @apply inline-block px-5 py-3 bg-brand-teal text-white rounded-md font-semibold shadow hover:bg-brand-teal-light transition duration-200;
+}
+
+.btn-secondary {
+  @apply inline-block px-5 py-3 bg-brand-gold text-brand-charcoal rounded-md font-semibold shadow hover:bg-brand-gold-light transition duration-200;
 }
 
 .section {
@@ -41,5 +45,24 @@ i.fas:hover, i.far:hover, i.fab:hover {
 }
 
 .card {
-  @apply p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300;
+  @apply p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100;
+}
+
+/* Custom brand styling */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #005B52 0%, #007A6B 100%);
+}
+
+.text-brand-accent {
+  @apply text-brand-gold;
+}
+
+/* Header and navigation styling */
+.nav-link {
+  @apply text-brand-charcoal hover:text-brand-teal transition-colors duration-200;
+}
+
+/* Button variants */
+.btn-outline {
+  @apply border-2 border-brand-teal text-brand-teal bg-transparent hover:bg-brand-teal hover:text-white transition-all duration-200;
 }

@@ -1,8 +1,9 @@
 // src/data/gallery-data.js
 
-export const bannerId = "71585fe1-6916-4e09-a0cb-adff0886c300";
+export const bannerId = "59c9f540-eedb-4f5e-6782-a92ee4647000";
 export const founders = "aafa0fae-55df-4761-a51a-48f19c3c9e00";
 export const logoId = "2f5dd955-89ba-416d-44de-dd37f4e14900"; 
+export const jbmHistoryId = "95767b55-fb7c-4027-734c-eef98f909e00";
 
 export const images = [
   { id: "2926647b-4a25-4d03-6202-0f8a10ae8100", caption: "Our amazing and dedicated crew." },
@@ -47,6 +48,4 @@ export const images = [
   { id: "6ad0c6fc-cebb-4130-4bbc-8bde4ae8ab00", caption: "Framing completed." },
   { id: "41859922-905b-43ad-4229-ab2765c86200", caption: "Delopidated house to be renovated." },
   { id: "da160e84-1839-4925-5d64-a91d9ac94800", caption: "Delopidated house to be renovated." }
-  
-
 ];
