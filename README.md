@@ -95,7 +95,7 @@ J&B McKinney Rentals
 ## 📝 License
 
 © 2025 J&B McKinney Rentals. All rights reserved.  
-Site design by [Cozyartz Media Group](https://cozyartz.com)
+Site design by [Cozyartz Media Group](https://cozyartzmedia.com)
 
 ---
 
