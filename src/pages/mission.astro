@@ -14,30 +14,38 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
       title="Our Mission | J&B McKinney Rentals"
       description="J&B McKinney Rentals is built on the belief that everyone deserves access to comfortable, dignified housing. Learn about our commitment to revitalizing Tuscaloosa communities."
     />
+    <script src="https://kit.fontawesome.com/4af6ceaa5a.js" crossorigin="anonymous"></script>
   </head>
 
   <body class="bg-brand-cream text-brand-charcoal leading-relaxed">
     <Header />
 
     <main class="max-w-6xl mx-auto px-4 py-16">
-      <h1 class="text-4xl font-bold text-center mb-8 animate-fade-in text-brand-charcoal">Our Mission</h1>
+      <h1 class="text-4xl font-bold text-center mb-8 animate-fade-in text-brand-charcoal">
+        <i class="fas fa-bullseye text-brand-teal mr-4"></i>
+        Our Mission
+      </h1>
 
-      <div class="grid md:grid-cols-2 gap-10 items-center animate-fade-in delay-100">
-        <div class="bg-white p-8 rounded-xl shadow-md border border-brand-cream/50">
-          <p class="mb-4 text-brand-charcoal/80">
-            J&B McKinney Rentals is built on the belief that everyone deserves access to comfortable, dignified housing. 
-            As a family-owned business rooted in Tuscaloosa, Alabama, our mission is to breathe new life into aging properties 
-            and neighborhoods while putting people first.
-          </p>
-          <p class="text-brand-charcoal/80">
-            From property management to full-scale renovations, we're deeply invested in our community — and we treat every 
-            home like it's our own. We're not just providing rentals, we're creating homes that are safe, welcoming, and built to last.
-          </p>
-          <div class="mt-6 flex gap-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-center animate-fade-in delay-100">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-brand-cream/50 space-y-6">
+          <div class="space-y-4">
+            <p class="text-brand-charcoal/80 text-lg leading-relaxed">
+              J&B McKinney Rentals is built on the belief that everyone deserves access to comfortable, dignified housing. 
+              As a family-owned business rooted in Tuscaloosa, Alabama, our mission is to breathe new life into aging properties 
+              and neighborhoods while putting people first.
+            </p>
+            <p class="text-brand-charcoal/80 text-lg leading-relaxed">
+              From property management to full-scale renovations, we're deeply invested in our community — and we treat every 
+              home like it's our own. We're not just providing rentals, we're creating homes that are safe, welcoming, and built to last.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
             <a href="/about" class="btn-secondary">
+              <i class="fas fa-book-open mr-2"></i>
               Our History
             </a>
-            <a href="/gallery-masonry" class="btn">
+            <a href="/gallery-masonry" class="btn-primary">
+              <i class="fas fa-images mr-2"></i>
               View Our Work
             </a>
           </div>
@@ -52,14 +60,21 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
               height="400"
               loading="lazy"
               decoding="async"
-              class="w-full max-w-[400px] object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
+              class="w-full max-w-[400px] object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
             />
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-charcoal/80 to-transparent p-4 rounded-b-lg">
-              <div class="text-white text-center">
-                <p class="font-semibold">Deirdre Stokes</p>
-                <p class="text-sm opacity-90">Founder and CEO</p>
-                <p class="font-semibold mt-2">Jonathan Stokes</p>
-                <p class="text-sm opacity-90">VP and COO</p>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-charcoal/90 to-transparent p-6 rounded-b-xl">
+              <div class="text-white text-center space-y-3">
+                <div class="space-y-2">
+                  <div>
+                    <p class="font-bold text-lg">Deirdre Stokes</p>
+                    <p class="text-sm opacity-90">Founder and CEO</p>
+                  </div>
+                  <div class="w-8 h-px bg-white/30 mx-auto"></div>
+                  <div>
+                    <p class="font-bold text-lg">Jonathan Stokes</p>
+                    <p class="text-sm opacity-90">VP and COO</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -68,7 +83,7 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
 
       <!-- Values Section -->
       <div class="mt-16 grid md:grid-cols-3 gap-8">
-        <div class="card text-center">
+        <div class="card-enhanced text-center">
           <div class="w-16 h-16 bg-brand-teal rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-heart text-white text-xl"></i>
           </div>
@@ -76,7 +91,7 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
           <p class="text-brand-charcoal/70">We're invested in Tuscaloosa's growth and prosperity, one home at a time.</p>
         </div>
         
-        <div class="card text-center">
+        <div class="card-enhanced text-center">
           <div class="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-handshake text-white text-xl"></i>
           </div>
@@ -84,7 +99,7 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
           <p class="text-brand-charcoal/70">Honest, transparent relationships with tenants, contractors, and community partners.</p>
         </div>
         
-        <div class="card text-center">
+        <div class="card-enhanced text-center">
           <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-star text-white text-xl"></i>
           </div>

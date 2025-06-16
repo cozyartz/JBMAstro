@@ -2,10 +2,10 @@
 import { logoId } from '../gallery-data.js';
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Mission", href: "/mission" },
-  { name: "Gallery", href: "/gallery-masonry" },
-  { name: "Contact", href: "/contact" }
+  { name: "Home", href: "/", icon: "fas fa-home" },
+  { name: "Mission", href: "/mission", icon: "fas fa-bullseye" },
+  { name: "Gallery", href: "/gallery-masonry", icon: "fas fa-images" },
+  { name: "Contact", href: "/contact", icon: "fas fa-envelope" }
 ];
 
 const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
@@ -23,21 +23,24 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
         loading="eager"
         decoding="async"
       />
-      <span class="text-lg sm:text-xl font-semibold text-gray-900 hidden sm:inline">
+      <span class="text-lg sm:text-xl font-semibold text-brand-charcoal hidden sm:inline">
         J&B McKinney Rentals
       </span>
     </a>
 
-    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-brand-charcoal">
       {navLinks.map(link => (
-        <a href={link.href} class="hover:text-blue-600 transition-colors duration-200">{link.name}</a>
+        <a href={link.href} class="hover:text-brand-teal transition-colors duration-200 flex items-center">
+          <i class={`${link.icon} mr-2`}></i>
+          {link.name}
+        </a>
       ))}
-      <a href="mailto:rentals@rentwithjbm.com" title="Email us" class="hover:text-blue-500">
+      <a href="mailto:rentals@rentwithjbm.com" title="Email us" class="hover:text-brand-teal flex items-center">
         <i class="fas fa-envelope text-base hover:scale-110 transition-transform duration-300"></i>
       </a>
     </nav>
 
-    <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+    <button id="menu-toggle" class="md:hidden text-brand-charcoal focus:outline-none" aria-label="Toggle menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -45,16 +48,20 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
   </div>
 
   <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden flex-col px-4 pt-24 pb-6 space-y-4 md:hidden animate-fade-in overflow-y-auto">
-    <button id="menu-close" class="absolute top-6 right-6 text-gray-700 text-2xl">
+    <button id="menu-close" class="absolute top-6 right-6 text-brand-charcoal text-2xl">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
     {navLinks.map(link => (
-      <a href={link.href} class="block w-full py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg text-lg font-medium">{link.name}</a>
+      <a href={link.href} class="block w-full py-3 px-4 text-brand-charcoal hover:bg-brand-cream rounded-lg text-lg font-medium flex items-center">
+        <i class={`${link.icon} mr-3`}></i>
+        {link.name}
+      </a>
     ))}
-    <a href="mailto:rentals@rentwithjbm.com" class="block w-full py-3 px-4 text-gray-800 hover:bg-gray-100 rounded-lg text-lg font-medium">
-      <i class="fas fa-envelope mr-2"></i> Email Us
+    <a href="mailto:rentals@rentwithjbm.com" class="block w-full py-3 px-4 text-brand-charcoal hover:bg-brand-cream rounded-lg text-lg font-medium flex items-center">
+      <i class="fas fa-envelope mr-3"></i> 
+      Email Us
     </a>
   </div>
 

@@ -31,21 +31,35 @@ i.fas:hover, i.far:hover, i.fab:hover {
   @apply scale-110 text-opacity-90;
 }
 
-/* Utility Enhancements */
+/* Enhanced Button Styles */
+.btn-primary {
+  @apply inline-flex items-center px-6 py-3 bg-brand-teal text-white rounded-full font-semibold shadow-lg hover:bg-brand-teal-light hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center px-6 py-3 bg-brand-gold text-brand-charcoal rounded-full font-semibold shadow-lg hover:bg-brand-gold-light hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300;
+}
+
 .btn {
   @apply inline-block px-5 py-3 bg-brand-teal text-white rounded-md font-semibold shadow hover:bg-brand-teal-light transition duration-200;
 }
 
-.btn-secondary {
-  @apply inline-block px-5 py-3 bg-brand-gold text-brand-charcoal rounded-md font-semibold shadow hover:bg-brand-gold-light transition duration-200;
+.btn-outline {
+  @apply border-2 border-brand-teal text-brand-teal bg-transparent hover:bg-brand-teal hover:text-white transition-all duration-200;
 }
 
-.section {
-  @apply py-12 px-6 max-w-6xl mx-auto;
-}
-
+/* Enhanced Card Styles */
 .card {
   @apply p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100;
+}
+
+.card-enhanced {
+  @apply p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl border border-brand-cream/50 transition-all duration-300 hover:-translate-y-1;
+}
+
+/* Section Utilities */
+.section {
+  @apply py-12 px-6 max-w-6xl mx-auto;
 }
 
 /* Custom brand styling */
@@ -62,7 +76,64 @@ i.fas:hover, i.far:hover, i.fab:hover {
   @apply text-brand-charcoal hover:text-brand-teal transition-colors duration-200;
 }
 
-/* Button variants */
-.btn-outline {
-  @apply border-2 border-brand-teal text-brand-teal bg-transparent hover:bg-brand-teal hover:text-white transition-all duration-200;
+/* Enhanced animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+.animate-fade-in.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-fade-in.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-fade-in.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.6s ease-out both;
+}
+
+/* Icon containers */
+.icon-container {
+  @apply w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg;
+}
+
+/* Improved spacing and typography */
+.prose-enhanced {
+  @apply prose prose-lg max-w-none;
+}
+
+.prose-enhanced p {
+  @apply text-brand-charcoal/80 leading-relaxed mb-4;
+}
+
+.prose-enhanced strong {
+  @apply text-brand-charcoal font-semibold;
+}
+
+/* Enhanced form styles */
+input:focus, textarea:focus {
+  @apply ring-2 ring-brand-teal ring-opacity-50 border-brand-teal;
+}
+
+/* Improved hover effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+/* Enhanced shadows */
+.shadow-brand {
+  box-shadow: 0 10px 25px rgba(0, 91, 82, 0.1);
+}
+
+.shadow-brand-lg {
+  box-shadow: 0 20px 40px rgba(0, 91, 82, 0.15);
 }

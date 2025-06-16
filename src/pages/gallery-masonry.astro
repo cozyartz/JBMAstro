@@ -14,16 +14,23 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
       title="Home Transformation Gallery | J&B McKinney Rentals"
       description="Explore renovations and revitalization projects by J&B McKinney Rentals, turning neglected properties into beautiful, welcoming homes."
     />
+    <script src="https://kit.fontawesome.com/4af6ceaa5a.js" crossorigin="anonymous"></script>
   </head>
 
   <body class="bg-white text-gray-900 leading-relaxed">
     <Header />
 
     <main class="max-w-7xl mx-auto px-4 py-16">
-      <h1 class="text-4xl font-bold text-center mb-6">Home Transformation Gallery</h1>
-      <p class="text-center max-w-2xl mx-auto text-lg mb-10">
-        From foundation to finishing touches — explore how we turn neglected houses into warm, welcoming homes.
-      </p>
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-6">
+          <i class="fas fa-images text-brand-teal mr-4"></i>
+          Home Transformation Gallery
+        </h1>
+        <p class="text-center max-w-3xl mx-auto text-lg mb-10 text-brand-charcoal/70 leading-relaxed">
+          <i class="fas fa-hammer text-brand-gold mr-2"></i>
+          From foundation to finishing touches — explore how we turn neglected houses into warm, welcoming homes.
+        </p>
+      </div>
 
       <GalleryMasonry client:load cloudflareBase={cloudflareBase} images={images} />
     </main>
