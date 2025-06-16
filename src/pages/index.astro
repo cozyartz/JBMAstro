@@ -21,8 +21,8 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
     <main class="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-24">
       <!-- Hero -->
       <section class="text-center space-y-6 animate-fade-in">
-        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-brand-charcoal">
-          Affordable Rentals. <span class="text-brand-teal">Beautiful Renovations.</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          <span class="text-brand-teal">Affordable Rentals, Beautiful Renovations</span>
         </h1>
         <p class="text-lg text-brand-charcoal/70 max-w-2xl mx-auto">
           Serving Tuscaloosa with care, craftsmanship, and pride in every home we touch.
@@ -37,8 +37,29 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
         </div>
       </section>
 
+      <!-- Video Section -->
+      <section class="animate-fade-in delay-100">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-brand-charcoal mb-4">See Our Work in Action</h2>
+          <p class="text-lg text-brand-charcoal/70 max-w-2xl mx-auto">
+            Watch how we transform neglected properties into beautiful, welcoming homes for families in Tuscaloosa.
+          </p>
+        </div>
+        <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+          <div style="position: relative; padding-top: 56.25%;">
+            <iframe
+              src="https://customer-fb73nihqgo3s10w7.cloudflarestream.com/3df3a0575156a72e3bec475ef6531516/iframe?muted=true&autoplay=true&poster=https%3A%2F%2Fcustomer-fb73nihqgo3s10w7.cloudflarestream.com%2F3df3a0575156a72e3bec475ef6531516%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&primaryColor=%231f82b9"
+              loading="lazy"
+              style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%; border-radius: 0.5rem;"
+              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       <!-- About -->
-      <section class="grid md:grid-cols-2 gap-10 items-center bg-white p-6 md:p-10 rounded-xl shadow-md animate-fade-in delay-100 border border-brand-cream">
+      <section class="grid md:grid-cols-2 gap-10 items-center bg-white p-6 md:p-10 rounded-xl shadow-md animate-fade-in delay-200 border border-brand-cream">
         <div>
           <h2 class="text-2xl font-semibold mb-4 text-brand-charcoal">Built by Family, for Families</h2>
           <p class="text-brand-charcoal/80 text-base leading-relaxed mb-4">
@@ -62,7 +83,7 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
       </section>
 
       <!-- Services -->
-      <section class="text-center animate-fade-in delay-200">
+      <section class="text-center animate-fade-in delay-300">
         <h3 class="text-2xl font-bold mb-6 text-brand-charcoal">What We Do</h3>
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 text-left">
           <div class="card">

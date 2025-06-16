@@ -44,15 +44,25 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
         </div>
 
         <div class="flex justify-center">
-          <img 
-            src={`${cloudflareBase}/${founders}/public`}
-            alt="Founders of J&B McKinney"
-            width="600"
-            height="400"
-            loading="lazy"
-            decoding="async"
-            class="w-full max-w-[400px] object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
-          />
+          <div class="relative">
+            <img 
+              src={`${cloudflareBase}/${founders}/public`}
+              alt="Deirdre Stokes and Jonathan Stokes, founders of J&B McKinney Rentals"
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async"
+              class="w-full max-w-[400px] object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
+            />
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-charcoal/80 to-transparent p-4 rounded-b-lg">
+              <div class="text-white text-center">
+                <p class="font-semibold">Deirdre Stokes</p>
+                <p class="text-sm opacity-90">Founder and CEO</p>
+                <p class="font-semibold mt-2">Jonathan Stokes</p>
+                <p class="text-sm opacity-90">VP and COO</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
