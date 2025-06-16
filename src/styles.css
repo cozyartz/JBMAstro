@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Font Awesome */
-@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import '@fawesome/fontawesome-free/css/all.min.css';
 
 /* Typography & Base Styling */
 body {
