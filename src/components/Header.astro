@@ -1,48 +1,82 @@
 ---
+import { logoId } from '../gallery-data.js';
+
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Mission", href: "/mission" },
-  { name: "Gallery", href: "/gallery-masonry" },
-  { name: "Contact", href: "/#contact" },
+  { name: "Home", href: "/", icon: "fas fa-home" },
+  { name: "Mission", href: "/mission", icon: "fas fa-bullseye" },
+  { name: "Gallery", href: "/gallery-masonry", icon: "fas fa-images" },
+  { name: "Contact", href: "/contact", icon: "fas fa-envelope" }
 ];
+
+const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
 ---
 
-<header class="bg-white shadow-md sticky top-0 z-50 animate-fade-in">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <a href="/" class="text-2xl font-bold text-gray-900">J&B McKinney Rentals</a>
+<header class="bg-white shadow-md sticky top-0 z-50 w-full">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center space-x-3 animate-fade-in">
+      <img
+        src={`${cloudflareBase}/${logoId}/public`}
+        alt="J&B McKinney Rentals Logo"
+        width="150"
+        height="40"
+        class="h-10 w-auto object-contain"
+        loading="eager"
+        decoding="async"
+      />
+      <span class="text-lg sm:text-xl font-semibold text-brand-charcoal hidden sm:inline">
+        J&B McKinney Rentals
+      </span>
+    </a>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden md:flex space-x-6">
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-brand-charcoal">
       {navLinks.map(link => (
-        <a href={link.href} class="text-gray-700 hover:text-black font-medium transition-all">{link.name}</a>
+        <a href={link.href} class="hover:text-brand-teal transition-colors duration-200 flex items-center">
+          <i class={`${link.icon} mr-2`}></i>
+          {link.name}
+        </a>
       ))}
+      <a href="mailto:rentals@rentwithjbm.com" title="Email us" class="hover:text-brand-teal flex items-center">
+        <i class="fas fa-envelope text-base hover:scale-110 transition-transform duration-300"></i>
+      </a>
     </nav>
 
-    <!-- Mobile Toggle Button -->
-    <button id="menu-toggle" class="md:hidden text-gray-700 hover:text-black focus:outline-none" aria-label="Toggle Menu">
-      ☰
-      <!-- Alternatively use Heroicon: 
+    <button id="menu-toggle" class="md:hidden text-brand-charcoal focus:outline-none" aria-label="Toggle menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
-      -->
     </button>
   </div>
 
-  <!-- Mobile Menu -->
-  <nav id="mobile-menu" class="hidden md:hidden px-4 pb-4 animate-fade-in">
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden flex-col px-4 pt-24 pb-6 space-y-4 md:hidden animate-fade-in overflow-y-auto">
+    <button id="menu-close" class="absolute top-6 right-6 text-brand-charcoal text-2xl">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
     {navLinks.map(link => (
-      <a href={link.href} class="block py-2 text-gray-700 hover:text-black font-medium transition-all">{link.name}</a>
+      <a href={link.href} class="block w-full py-3 px-4 text-brand-charcoal hover:bg-brand-cream rounded-lg text-lg font-medium flex items-center">
+        <i class={`${link.icon} mr-3`}></i>
+        {link.name}
+      </a>
     ))}
-  </nav>
+    <a href="mailto:rentals@rentwithjbm.com" class="block w-full py-3 px-4 text-brand-charcoal hover:bg-brand-cream rounded-lg text-lg font-medium flex items-center">
+      <i class="fas fa-envelope mr-3"></i> 
+      Email Us
+    </a>
+  </div>
 
-  <script>
+  <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       const toggle = document.getElementById("menu-toggle");
       const menu = document.getElementById("mobile-menu");
+      const close = document.getElementById("menu-close");
 
       toggle.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
+        menu.classList.remove("hidden");
+      });
+
+      close.addEventListener("click", () => {
+        menu.classList.add("hidden");
       });
     });
   </script>

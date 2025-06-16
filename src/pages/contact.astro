@@ -1,0 +1,97 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Seo from '../components/Seo.astro';
+import MotionFade from '../components/MotionFade.jsx';
+---
+
+<html lang="en">
+  <head>
+    <Seo title="Contact Us | J&B McKinney Rentals" description="Reach out to J&B McKinney Rentals to inquire about properties, availability, or partnership opportunities in Tuscaloosa." />
+    <script src="https://kit.fontawesome.com/4af6ceaa5a.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="bg-white text-gray-900 leading-relaxed">
+    <Header />
+
+    <main class="max-w-7xl mx-auto px-6 py-24 space-y-16">
+      <MotionFade client:load>
+        <h1 class="text-4xl sm:text-5xl font-bold text-center mb-12">
+          <i class="fas fa-envelope text-brand-teal mr-4"></i>
+          Get in Touch
+        </h1>
+      </MotionFade>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <MotionFade client:load delay={0.1}>
+          <form class="space-y-6 bg-gray-50 p-10 rounded-2xl shadow-xl border border-gray-200">
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-1 flex items-center">
+                <i class="fas fa-user text-brand-teal mr-2"></i>
+                Name
+              </label>
+              <input type="text" id="name" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-teal" required />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-1 flex items-center">
+                <i class="fas fa-envelope text-brand-teal mr-2"></i>
+                Email
+              </label>
+              <input type="email" id="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-teal" required />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold mb-1 flex items-center">
+                <i class="fas fa-comment text-brand-teal mr-2"></i>
+                Message
+              </label>
+              <textarea id="message" rows="6" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-teal" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-brand-teal hover:bg-brand-teal-light text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center">
+              <i class="fas fa-paper-plane mr-2"></i>
+              Send Message
+            </button>
+          </form>
+        </MotionFade>
+
+        <MotionFade client:load delay={0.2}>
+          <div class="space-y-8 text-lg bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+            <div class="text-center mb-8">
+              <h2 class="text-2xl font-bold text-brand-charcoal mb-4">
+                <i class="fas fa-handshake text-brand-teal mr-2"></i>
+                Let's Connect
+              </h2>
+              <p class="text-brand-charcoal/70">
+                Whether you're looking to rent, invest, or collaborate, we're here to help.
+                Drop us a line and we'll get back to you soon.
+              </p>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="flex items-center p-4 bg-brand-cream rounded-lg">
+                <div class="w-12 h-12 bg-brand-teal rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-brand-charcoal">Email</p>
+                  <a href="mailto:rentals@rentwithjbm.com" class="text-brand-teal hover:text-brand-teal-light transition-colors">rentals@rentwithjbm.com</a>
+                </div>
+              </div>
+              
+              <div class="flex items-center p-4 bg-brand-cream rounded-lg">
+                <div class="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-brand-charcoal">Location</p>
+                  <span class="text-brand-charcoal/70">Tuscaloosa, Alabama</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </MotionFade>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>

@@ -1,24 +1,32 @@
 ---
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Mission", href: "/#mission" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/#contact" },
-];
+const year = new Date().getFullYear();
 ---
 
-<header class="bg-white shadow sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-    <a href="/" class="text-2xl font-bold text-gray-900">J&B McKinney Rentals</a>
-    <nav class="space-x-6">
-      {navItems.map((item) => (
-        <a
-          href={item.href}
-          class="text-gray-700 hover:text-black text-base font-medium transition-colors"
-        >
-          {item.label}
-        </a>
-      ))}
-    </nav>
+<footer class="bg-gray-100 text-gray-700 text-sm mt-20 border-t">
+  <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+    <div class="animate-fade-in">
+      <h3 class="text-base font-semibold mb-2">J&B McKinney Rentals</h3>
+      <p>Affordable Rentals. Beautiful Renovations.</p>
+    </div>
+
+    <div class="animate-fade-in delay-100">
+      <h3 class="text-base font-semibold mb-2">Contact</h3>
+      <p><i class="fas fa-envelope mr-2 text-blue-600"></i> <a href="mailto:rentals@rentwithjbm.com" class="hover:underline">rentals@rentwithjbm.com</a></p>
+    </div>
+
+    <div class="animate-fade-in delay-200">
+      <h3 class="text-base font-semibold mb-2">Quick Links</h3>
+      <ul class="space-y-1">
+        <li><a href="/" class="hover:underline">Home</a></li>
+        <li><a href="/mission" class="hover:underline">Mission</a></li>
+        <li><a href="/gallery-masonry" class="hover:underline">Gallery</a></li>
+        <li><a href="/contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
   </div>
-</header>
+
+  <div class="text-center text-xs text-gray-500 border-t py-4">
+    &copy; {year} J&B McKinney Rentals. All rights reserved.<br />
+    <span class="inline-block mt-1">Coded with <span class="text-red-500">❤️</span> by <a href="https://cozyartz.com" target="_blank" class="hover:underline font-medium text-gray-600">Cozyartz Media Group</a>.</span>
+  </div>
+</footer>
