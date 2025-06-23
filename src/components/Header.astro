@@ -5,6 +5,7 @@ const navLinks = [
   { name: "Home", href: "/", icon: "fas fa-home" },
   { name: "Mission", href: "/mission", icon: "fas fa-bullseye" },
   { name: "Gallery", href: "/gallery-masonry", icon: "fas fa-images" },
+  { name: "About", href: "/about", icon: "fas fa-info-circle" },
   { name: "Contact", href: "/contact", icon: "fas fa-envelope" }
 ];
 
@@ -29,12 +30,14 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
     </a>
 
     <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-brand-charcoal">
-      {navLinks.map(link => (
-        <a href={link.href} class="hover:text-brand-teal transition-colors duration-200 flex items-center">
-          <i class={`${link.icon} mr-2`}></i>
-          {link.name}
-        </a>
-      ))}
+      {
+        navLinks.map(link => (
+          <a href={link.href} class="hover:text-brand-teal transition-colors duration-200 flex items-center">
+            <i class={`${link.icon} mr-2`}></i>
+            {link.name}
+          </a>
+        ))
+      }
       <a href="mailto:rentals@rentwithjbm.com" title="Email us" class="hover:text-brand-teal flex items-center">
         <i class="fas fa-envelope text-base hover:scale-110 transition-transform duration-300"></i>
       </a>
@@ -53,14 +56,16 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
-    {navLinks.map(link => (
-      <a href={link.href} class="block w-full py-3 px-4 text-brand-charcoal hover:bg-brand-cream rounded-lg text-lg font-medium flex items-center">
-        <i class={`${link.icon} mr-3`}></i>
-        {link.name}
-      </a>
-    ))}
+    {
+      navLinks.map(link => (
+        <a href={link.href} class="block w-full py-3 px-4 text-brand-charcoal hover:bg-brand-cream rounded-lg text-lg font-medium flex items-center">
+          <i class={`${link.icon} mr-3`}></i>
+          {link.name}
+        </a>
+      ))
+    }
     <a href="mailto:rentals@rentwithjbm.com" class="block w-full py-3 px-4 text-brand-charcoal hover:bg-brand-cream rounded-lg text-lg font-medium flex items-center">
-      <i class="fas fa-envelope mr-3"></i> 
+      <i class="fas fa-envelope mr-3"></i>
       Email Us
     </a>
   </div>
