@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 /* Font Awesome */
-<<<<<<< HEAD
-@import '@fawesome/fontawesome-free/css/all.min.css';
-=======
 @import '@fortawesome/fontawesome-free/css/all.min.css';
->>>>>>> 7ea148b (Integrated framer-motion and updated components/pages)
 
 /* Typography & Base Styling */
 body {
