@@ -19,25 +19,25 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
   <body class="bg-brand-cream text-brand-charcoal leading-relaxed">
     <Header />
 
-    <main class="max-w-6xl mx-auto px-4 py-16 space-y-16">
+    <main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
       <!-- Hero Section -->
       <MotionFade client:load>
-        <div class="text-center space-y-6">
+        <div class="text-center space-y-8 py-8">
           <h1 class="text-4xl sm:text-5xl font-bold text-brand-charcoal">
             <i class="fas fa-book-open text-brand-teal mr-4"></i>
             Our Story
           </h1>
-          <p class="text-xl text-brand-charcoal/70 max-w-3xl mx-auto">
+          <p class="text-xl text-brand-charcoal/70 max-w-3xl mx-auto leading-relaxed">
             A legacy of education, service, and building generational wealth through real estate
           </p>
         </div>
       </MotionFade>
 
       <!-- Main Content -->
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Image -->
         <MotionFade client:load delay={0.1}>
-          <div class="relative">
+          <div class="relative lg:order-first">
             <img 
               src={`${cloudflareBase}/${jbmHistoryId}/public`}
               alt="James E. McKinney and Bobbye S. Ivery"
@@ -45,22 +45,11 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
               height="400"
               loading="lazy"
               decoding="async"
-              class="w-full object-cover rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+              class="w-full aspect-[4/3] object-cover rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300 ease-in-out"
             />
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-charcoal/90 to-transparent p-6 rounded-b-xl">
-              <div class="text-white text-center space-y-2">
-                <div class="flex justify-center items-center space-x-4">
-                  <div class="text-center">
-                    <p class="font-bold text-lg">Bobbye McKinney</p>
-                    <p class="text-sm opacity-90">Born 1932</p>
-                  </div>
-                  <div class="w-px h-12 bg-white/30"></div>
-                  <div class="text-center">
-                    <p class="font-bold text-lg">James McKinney</p>
-                    <p class="text-sm opacity-90">1932-2015</p>
-                  </div>
-                </div>
-                <p class="text-sm opacity-80 italic">Founders of the McKinney Legacy</p>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-charcoal/90 to-transparent p-4 rounded-b-xl">
+              <div class="text-white text-center">
+                <p class="font-bold text-lg">Bobbye & James McKinney</p>
               </div>
             </div>
           </div>
@@ -68,23 +57,25 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
 
         <!-- Story Content -->
         <MotionFade client:load delay={0.2}>
-          <div class="space-y-6">
-            <div class="bg-white p-8 rounded-xl shadow-md border border-brand-cream/50">
-              <h2 class="text-2xl font-bold text-brand-teal mb-4">
-                <i class="fas fa-heart mr-2"></i>
-                JBM History
-              </h2>
+          <div class="lg:order-last">
+            <div class="bg-white p-8 md:p-10 rounded-xl shadow-lg border border-brand-cream/50">
+              <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-teal">
+                  <i class="fas fa-heart mr-3"></i>
+                  JBM History
+                </h2>
+              </div>
               
-              <div class="prose prose-lg text-brand-charcoal/80 space-y-4">
-                <p>
+              <div class="prose prose-lg text-brand-charcoal/80 space-y-6 max-w-none">
+                <p class="text-lg leading-relaxed">
                   <strong class="text-brand-charcoal">J&B McKinney Rental Properties, LLC</strong> was established in honor of the extraordinary couple, <strong class="text-brand-teal">James E. McKinney and Bobbye S. Ivery</strong>—the parents of our Founder and CEO, Deirdre McKinney Stokes, and the grandparents of our COO, Jonathan Dean Stokes.
                 </p>
 
-                <p>
+                <p class="text-lg leading-relaxed">
                   James and Bobbye were both born and raised in Tuscaloosa, Alabama, and came of age during the 1930s to 1950s. They met in the third grade and went on to graduate from Industrial High School, where <strong class="text-brand-gold">Bobbye was Valedictorian</strong> and <strong class="text-brand-gold">James ranked third in the class</strong>. Both pursued higher education at Alabama State College, earning bachelor's and master's degrees in education.
                 </p>
 
-                <p>
+                <p class="text-lg leading-relaxed">
                   During their college years, financial hardship led James to work in the steel mills of Gary, Indiana—where his family had relocated during the Great Migration. Before he could return to school, he was drafted into the Korean War. He served his country honorably and, upon completing his military service, returned to college with support from the GI Bill. While James was away, Bobbye completed her degree and began her teaching career. The couple reunited, married, and soon welcomed their daughter, Deirdre Celeste McKinney.
                 </p>
               </div>
@@ -95,48 +86,56 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
 
       <!-- Continued Story -->
       <MotionFade client:load delay={0.3}>
-        <div class="bg-white p-8 rounded-xl shadow-md border border-brand-cream/50 space-y-6">
-          <h3 class="text-xl font-bold text-brand-teal">
-            <i class="fas fa-building mr-2"></i>
-            Building a Legacy
-          </h3>
-          
-          <div class="prose prose-lg text-brand-charcoal/80 space-y-4">
-            <p>
-              As they built successful careers in education, James and Bobbye also turned their focus to creating long-term financial stability and generational wealth. They identified <strong class="text-brand-charcoal">real estate as the most dependable path forward</strong>. In 1965, they purchased their family home in Tuscaloosa, and in 1968, James acquired his childhood home and began renting it to tenants.
-            </p>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg border border-brand-cream/50">
+            <div class="text-center mb-10">
+              <h3 class="text-2xl md:text-3xl font-bold text-brand-teal">
+                <i class="fas fa-building mr-3"></i>
+                Building a Legacy
+              </h3>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-8">
+              <div class="prose prose-lg text-brand-charcoal/80 mx-auto text-center">
+                <p class="text-lg leading-relaxed mb-6">
+                  As they built successful careers in education, James and Bobbye also turned their focus to creating long-term financial stability and generational wealth. They identified <strong class="text-brand-charcoal">real estate as the most dependable path forward</strong>. In 1965, they purchased their family home in Tuscaloosa, and in 1968, James acquired his childhood home and began renting it to tenants.
+                </p>
 
-            <p>
-              That same year, both James and Bobbye were recruited to work in the Muskegon Heights Public School System in Michigan. With improved job opportunities and a shared vision, they began purchasing, renovating, and managing residential rental properties—<strong class="text-brand-teal">laying the foundation for what would eventually become J&B McKinney Rental Properties, LLC</strong>.
-            </p>
+                <p class="text-lg leading-relaxed mb-6">
+                  That same year, both James and Bobbye were recruited to work in the Muskegon Heights Public School System in Michigan. With improved job opportunities and a shared vision, they began purchasing, renovating, and managing residential rental properties—<strong class="text-brand-teal">laying the foundation for what would eventually become J&B McKinney Rental Properties, LLC</strong>.
+                </p>
 
-            <p>
-              After 60 years of marriage, James passed away in 2015. Now 93 years old, Bobbye often reflects on how their modest beginnings in real estate have blossomed into <strong class="text-brand-gold">a company dedicated to helping individuals and families access safe, affordable housing</strong>.
-            </p>
+                <p class="text-lg leading-relaxed">
+                  After 60 years of marriage, James passed away in 2015. Now 93 years old, Bobbye often reflects on how their modest beginnings in real estate have blossomed into <strong class="text-brand-gold">a company dedicated to helping individuals and families access safe, affordable housing</strong>.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </MotionFade>
 
       <!-- Legacy Section -->
       <MotionFade client:load delay={0.4}>
-        <div class="bg-brand-charcoal text-white p-8 rounded-xl shadow-lg">
-          <div class="text-center space-y-4">
-            <h3 class="text-2xl font-bold">
-              <i class="fas fa-star mr-2"></i>
-              Continuing Their Vision
-            </h3>
-            <p class="text-lg text-white/90 max-w-3xl mx-auto">
-              Today, J&B McKinney Rentals carries forward James and Bobbye's commitment to education, service, and community building. Their legacy lives on through every home we renovate and every family we serve.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-              <a href="/mission" class="inline-flex items-center px-6 py-3 bg-brand-teal text-white rounded-full font-medium shadow-lg hover:bg-opacity-90 transition-all duration-300">
-                <i class="fas fa-bullseye mr-2"></i>
-                Our Mission
-              </a>
-              <a href="/gallery-masonry" class="inline-flex items-center px-6 py-3 bg-white text-brand-teal rounded-full font-medium shadow-lg hover:bg-brand-cream transition-all duration-300">
-                <i class="fas fa-images mr-2"></i>
-                View Our Work
-              </a>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-brand-charcoal text-white p-8 md:p-12 rounded-xl shadow-xl">
+            <div class="text-center space-y-8">
+              <h3 class="text-2xl md:text-3xl font-bold">
+                <i class="fas fa-star mr-3"></i>
+                Continuing Their Vision
+              </h3>
+              <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                Today, J&B McKinney Rentals carries forward James and Bobbye's commitment to education, service, and community building. Their legacy lives on through every home we renovate and every family we serve.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+                <a href="/mission" class="inline-flex items-center px-8 py-4 bg-brand-teal text-white rounded-full font-medium shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                  <i class="fas fa-bullseye mr-3"></i>
+                  Our Mission
+                </a>
+                <a href="/gallery-masonry" class="inline-flex items-center px-8 py-4 bg-white text-brand-teal rounded-full font-medium shadow-lg hover:bg-brand-cream transition-all duration-300 transform hover:scale-105">
+                  <i class="fas fa-images mr-3"></i>
+                  View Our Work
+                </a>
+              </div>
             </div>
           </div>
         </div>
