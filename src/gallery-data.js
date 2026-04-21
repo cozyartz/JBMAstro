@@ -2,8 +2,18 @@
 
 export const bannerId = "59c9f540-eedb-4f5e-6782-a92ee4647000";
 export const founders = "aafa0fae-55df-4761-a51a-48f19c3c9e00";
-export const logoId = "2f5dd955-89ba-416d-44de-dd37f4e14900"; 
+export const logoId = "2f5dd955-89ba-416d-44de-dd37f4e14900";
 export const jbmHistoryId = "95767b55-fb7c-4027-734c-eef98f909e00";
+
+// Duplex Project — ground-up construction, uploaded to Cloudflare Images
+export const duplexProject = [
+  { id: "24329cda-6bd8-4606-d6f7-527957912f00", title: "The Vacant Lot",                            description: "Where it all began — an empty lot in Tuscaloosa with nothing but potential." },
+  { id: "a040d039-b852-4fc4-2026-20fb27f84900", title: "Lot Cleared & Ready to Break Ground",       description: "Site prepped, leveled, and ready for construction to begin." },
+  { id: "7539cc02-9c61-4bcc-8777-0df031bf4f00", title: "Laying the Foundation",                     description: "Pouring the footings and slab — the backbone of every home we build." },
+  { id: "a85e9007-c519-4ad4-cff6-99184fd01d00", title: "Building the Framework",                    description: "Walls go up and the structure of the duplex starts to take shape." },
+  { id: "95ff895a-c5ef-479c-e355-434607c99900", title: "Putting on the Exterior",                   description: "Siding, sheathing, and weatherproofing get the home ready for the elements.", id2: "8f85103d-1c86-4f3f-5806-d67f436b6200" },
+  { id: "f2c8aaba-34c0-4b98-cb5d-744275f4b500", title: "Installation of the Windows and Front Porch", description: "Windows framed in and the welcoming front porch completed — nearly home." }
+];
 
 export const images = [
   { id: "2926647b-4a25-4d03-6202-0f8a10ae8100", caption: "Our amazing and dedicated crew." },

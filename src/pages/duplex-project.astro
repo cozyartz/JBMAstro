@@ -1,0 +1,113 @@
+---
+import Seo from '../components/Seo.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { duplexProject } from '../gallery-data.js';
+
+const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
+---
+
+<html lang="en">
+  <head>
+    <Seo
+      title="The Duplex Project | J&B McKinney Rentals"
+      description="Follow the J&B McKinney duplex build from vacant lot to finished home — a step-by-step look at our newest ground-up construction in Tuscaloosa."
+    />
+  </head>
+  <body class="bg-brand-cream text-brand-charcoal leading-relaxed antialiased">
+    <Header />
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-20 space-y-20">
+      <!-- Hero -->
+      <section class="text-center space-y-6 animate-fade-in">
+        <p class="uppercase tracking-widest text-sm font-semibold text-brand-teal">
+          <i class="fas fa-hard-hat mr-2"></i>
+          New Construction
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          The <span class="text-brand-teal">Duplex Project</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-brand-charcoal/70 max-w-3xl mx-auto leading-relaxed">
+          A ground-up build in Tuscaloosa — follow the journey from empty lot to finished duplex, one milestone at a time.
+        </p>
+      </section>
+
+      <!-- Timeline -->
+      <section class="relative">
+        <!-- Vertical line (desktop) -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-brand-teal/20 -translate-x-1/2"></div>
+
+        <ol class="space-y-16 md:space-y-24">
+          {duplexProject.map((step, idx) => (
+            <li class={`relative grid md:grid-cols-2 gap-8 md:gap-12 items-center ${idx % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}>
+              <!-- Step badge (desktop center dot) -->
+              <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-brand-teal text-white items-center justify-center font-bold shadow-lg ring-4 ring-brand-cream z-10">
+                {idx + 1}
+              </div>
+
+              <!-- Image column -->
+              <div class="animate-fade-in">
+                <div class="rounded-2xl overflow-hidden shadow-xl border border-brand-cream/60 bg-white">
+                  <img
+                    src={`${cloudflareBase}/${step.id}/public`}
+                    alt={step.title}
+                    class="w-full h-auto object-cover"
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                  />
+                </div>
+                {step.id2 && (
+                  <div class="mt-4 rounded-2xl overflow-hidden shadow-xl border border-brand-cream/60 bg-white">
+                    <img
+                      src={`${cloudflareBase}/${step.id2}/public`}
+                      alt={`${step.title} — additional view`}
+                      class="w-full h-auto object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                )}
+              </div>
+
+              <!-- Text column -->
+              <div class="space-y-4 animate-fade-in delay-100">
+                <span class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-teal text-white font-bold shadow">
+                  {idx + 1}
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-brand-charcoal">
+                  {step.title}
+                </h2>
+                <p class="text-brand-charcoal/75 text-lg leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <!-- CTA -->
+      <section class="text-center bg-white p-10 sm:p-14 rounded-2xl shadow-xl border border-brand-cream/50 animate-fade-in">
+        <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+          <i class="fas fa-home text-brand-teal mr-2"></i>
+          More than a house — a home being built with care.
+        </h3>
+        <p class="text-brand-charcoal/70 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+          We build every property with the same attention we'd give our own — because families will call it home.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/gallery-masonry" class="btn-primary">
+            <i class="fas fa-images mr-2"></i>
+            See More Transformations
+          </a>
+          <a href="/contact" class="btn-secondary">
+            <i class="fas fa-envelope mr-2"></i>
+            Get in Touch
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

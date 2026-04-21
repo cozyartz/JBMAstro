@@ -3,7 +3,10 @@ import Seo from '../components/Seo.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-import { bannerId } from '../gallery-data.js';
+import { bannerId, duplexProject } from '../gallery-data.js';
+
+const duplexHero = duplexProject[0];
+const duplexLatest = duplexProject[duplexProject.length - 1];
 
 const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
 ---
@@ -88,6 +91,46 @@ const cloudflareBase = import.meta.env.CLOUDFLARE_BASE;
             class="rounded-xl shadow-lg w-full max-w-md h-auto object-cover animate-zoom-in hover:scale-105 transition-transform duration-300"
             loading="lazy"
           />
+        </div>
+      </section>
+
+      <!-- Duplex Project Teaser -->
+      <section class="relative overflow-hidden rounded-2xl shadow-xl border border-brand-cream/50 animate-fade-in delay-250">
+        <div class="grid lg:grid-cols-2">
+          <div class="relative min-h-[320px] lg:min-h-[420px]">
+            <img
+              src={`${cloudflareBase}/${duplexHero.id}/public`}
+              alt="Vacant lot — start of the Duplex Project"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src={`${cloudflareBase}/${duplexLatest.id}/public`}
+              alt="Duplex with windows and front porch installed"
+              class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-700"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="bg-brand-gradient text-white p-10 lg:p-14 flex flex-col justify-center space-y-5">
+            <p class="uppercase tracking-widest text-xs font-semibold text-brand-gold">
+              <i class="fas fa-hard-hat mr-2"></i>
+              New Construction · In Progress
+            </p>
+            <h2 class="text-3xl lg:text-4xl font-bold leading-tight">
+              Follow the Duplex Project — from vacant lot to finished home.
+            </h2>
+            <p class="text-white/85 text-lg leading-relaxed">
+              Watch our newest ground-up build come together in Tuscaloosa, one milestone at a time. Foundation poured, framework up, windows and porch installed — see every step.
+            </p>
+            <div>
+              <a href="/duplex-project" class="inline-flex items-center px-6 py-3 bg-white text-brand-teal rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300">
+                <i class="fas fa-hammer mr-2"></i>
+                View the Build Story
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
